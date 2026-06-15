@@ -1,0 +1,50 @@
+[
+  {
+    "fileId": "mqf6v03b-8piqgok",
+    "generatedAt": "2026-06-15T12:29:44.844Z",
+    "result": {
+      "knowledgePoints": [
+        "Python列表生成与数组转换",
+        "NumPy数组的reshape操作",
+        "字典的创建与键值对添加",
+        "DataFrame的构建与排序",
+        "数据分析中的统计计算（均值和方差）"
+      ],
+      "questions": [
+        {
+          "question": "在Python中，使用列表推导式生成包含1到10000的整数列表，正确的写法是？",
+          "options": [
+            "A. list1 = [1:10000]",
+            "B. list1 = [i for i in range(1, 10001)]",
+            "C. list1 = [i for i in range(1, 10000)]",
+            "D. list1 = list(range(1, 10000))"
+          ],
+          "answer": "B",
+          "explanation": "range(1, 10001)生成从1到10000的整数，列表推导式[i for i in range(1, 10001)]正确。选项C和D只到9999，选项A语法错误。"
+        },
+        {
+          "question": "将一维数组data11转换为1000行10列的数组data12，应使用NumPy的哪个函数？",
+          "options": [
+            "A. np.reshape(data11, (1000, 10))",
+            "B. np.resize(data11, (1000, 10))",
+            "C. np.transpose(data11, (1000, 10))",
+            "D. np.flatten(data11, (1000, 10))"
+          ],
+          "answer": "A",
+          "explanation": "np.reshape用于改变数组形状，参数为目标形状(1000,10)。np.resize改变大小但可能重复数据，np.transpose用于转置，np.flatten用于展平。"
+        },
+        {
+          "question": "在将字典转换为DataFrame并按'mean'列降序排列时，应使用pandas的哪个方法？",
+          "options": [
+            "A. df1.sort_values(by='mean', ascending=True)",
+            "B. df1.sort_values(by='mean', ascending=False)",
+            "C. df1.sort_index(ascending=False)",
+            "D. df1.order(by='mean', descending=True)"
+          ],
+          "answer": "B",
+          "explanation": "sort_values方法按指定列排序，ascending=False表示降序排列。选项A是升序，选项C按索引排序，选项D的order方法不存在。"
+        }
+      ]
+    }
+  }
+]
