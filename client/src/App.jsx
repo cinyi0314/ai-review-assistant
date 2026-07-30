@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 import SubjectCreation from './SubjectCreation'
+import TextbookSource from './TextbookSource'
 
 const API_BASE = (import.meta.env.VITE_API_BASE || 'http://localhost:3000') + '/api'
 
@@ -16,7 +17,9 @@ async function safeJson(res) {
 }
 
 function App() {
-  const [step, setStep] = useState(1) // 1=创建科目, 2=主界面
+  const [step, setStep] = useState(1) // 1=创建科目, 2=教材选择, 3=主界面
+
+  const [textbookSelection, setTextbookSelection] = useState(null)
 
   const [file, setFile] = useState(null)
   const [uploading, setUploading] = useState(false)
@@ -736,13 +739,25 @@ function App() {
         onCreate={async (name) => {
           await handleSelectSubject(name)
           setCurrentSubjectName(name)
-          setStep(2)
+          setStep(step + 1)
         }}
       />
     )
   }
 
-  // Step 2: 主界面
+  // Step 2: 教材选择
+  if (step === 2) {
+    return (
+      <TextbookSource
+        selected={textbookSelection}
+        onSelect={(sel) => setTextbookSelection(sel)}
+        onBack={() => setStep(step - 1)}
+        onNext={() => setStep(step + 1)}
+      />
+    )
+  }
+
+  // Step 3: 主界面
   return (
     <div className="app">
       <header className="header">
