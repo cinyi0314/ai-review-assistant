@@ -7,6 +7,10 @@ import QuestionTypeSettings from './QuestionTypeSettings'
 import ExamScope from './ExamScope'
 import QuestionBank from './QuestionBank'
 import SupplementaryMaterials from './SupplementaryMaterials'
+import StudyHome from './StudyHome'
+import PracticeMode from './PracticeMode'
+import ReviewMode from './ReviewMode'
+import ReciteMode from './ReciteMode'
 
 const API_BASE = (import.meta.env.VITE_API_BASE || 'http://localhost:3000') + '/api'
 
@@ -822,7 +826,54 @@ function App() {
     )
   }
 
-  // Step 8: 主界面
+  // Step 8: 主界面（子路由）
+  const [mainMode, setMainMode] = useState('home') // home | practice | review | recite
+
+  if (step === 8 && mainMode === 'practice') {
+    return (
+      <PracticeMode
+        questionTypes={questionTypeConfig}
+        questions={questions}
+        onBack={() => setMainMode('home')}
+      />
+    )
+  }
+
+  if (step === 8 && mainMode === 'review') {
+    return (
+      <ReviewMode
+        subjectId={subjectId}
+        onBack={() => setMainMode('home')}
+      />
+    )
+  }
+
+  if (step === 8 && mainMode === 'recite') {
+    return (
+      <ReciteMode
+        subjectId={subjectId}
+        onBack={() => setMainMode('home')}
+      />
+    )
+  }
+
+  if (step === 8) {
+    return (
+      <StudyHome
+        subjectName={currentSubjectName}
+        onNavigate={(s) => setStep(s)}
+        onStartPractice={() => setMainMode('practice')}
+        onStartReview={() => setMainMode('review')}
+        onStartRecite={() => setMainMode('recite')}
+        stats={{ questionsAnswered: 0, correctRate: 0, dueReviews: dueReviews.length }}
+      />
+    )
+  }
+
+  // 旧版主界面（保留兜底）
+  if (step === 8 && mainMode === 'home') {
+    return null // handled above
+  }
   return (
     <div className="app">
       <header className="header">

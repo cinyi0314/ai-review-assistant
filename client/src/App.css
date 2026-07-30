@@ -1269,6 +1269,52 @@ button.btn-review-done:hover:not(:disabled) {
   box-shadow: none;
 }
 
+/* ---------- Study Home ---------- */
+.study-stats { display: flex; justify-content: center; gap: 40px; }
+
+.stat-item { text-align: center; }
+
+.stat-num { font-size: 36px; font-weight: 700; color: var(--accent); }
+
+.stat-label { font-size: 13px; color: var(--text); margin-top: 4px; }
+
+.mode-cards { display: flex; gap: 14px; }
+
+.mode-card { flex: 1; padding: 28px 16px; border-radius: 14px; text-align: center; cursor: pointer; transition: transform 0.15s, box-shadow 0.15s; }
+.mode-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+
+.mode-practice { background: linear-gradient(135deg, rgba(170,59,255,0.1), rgba(170,59,255,0.05)); border: 2px solid rgba(170,59,255,0.3); }
+
+.mode-recite { background: linear-gradient(135deg, rgba(52,152,219,0.1), rgba(52,152,219,0.05)); border: 2px solid rgba(52,152,219,0.3); }
+
+.mode-review { background: linear-gradient(135deg, rgba(39,174,96,0.1), rgba(39,174,96,0.05)); border: 2px solid rgba(39,174,96,0.3); }
+
+.mode-icon { font-size: 40px; margin-bottom: 8px; }
+
+.mode-title { font-size: 20px; font-weight: 700; color: var(--text-h); margin-bottom: 4px; }
+
+.mode-desc { font-size: 13px; color: var(--text); }
+
+.quick-links { display: flex; gap: 8px; flex-wrap: wrap; }
+
+button.btn-quick { font-size: 13px; padding: 6px 14px; background: var(--bg); border: 1px solid var(--border); color: var(--text-h); border-radius: 8px; cursor: pointer; }
+button.btn-quick:hover { background: var(--accent-bg); }
+
+/* ---------- Practice Mode ---------- */
+.count-grid { display: flex; gap: 10px; justify-content: center; }
+
+button.btn-active { background: var(--accent) !important; color: #fff !important; border-color: var(--accent) !important; }
+
+.opt-correct { background: rgba(39,174,96,0.12) !important; border-color: #27ae60 !important; }
+
+.opt-wrong { background: rgba(231,76,60,0.08) !important; border-color: #e74c3c !important; }
+
+/* ---------- Recite Mode ---------- */
+.recite-card { min-height: 200px; display: flex; align-items: center; justify-content: center; background: var(--bg); border-radius: 14px; border: 2px solid var(--border); padding: 32px; cursor: pointer; user-select: none; transition: border-color 0.15s; }
+.recite-card:hover { border-color: var(--accent-border); }
+
+.recite-content { font-size: 22px; line-height: 1.7; color: var(--text-h); text-align: center; }
+
 /* ---------- responsive ---------- */
 @media (max-width: 600px) {
   .header h1 {
