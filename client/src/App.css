@@ -208,6 +208,22 @@
   border-color: #e74c3c !important;
 }
 
+/* ---------- Back button ---------- */
+button.back-btn-top {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 14px;
+  padding: 6px 14px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text-h);
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 10;
+}
+button.back-btn-top:hover { background: var(--accent-bg); }
+
 /* ---------- Subject Creation Page ---------- */
 .subject-creation-page {
   min-height: 100vh;

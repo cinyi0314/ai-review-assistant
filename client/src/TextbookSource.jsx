@@ -30,6 +30,7 @@ function TextbookSource({ onNext, onBack, selected, onSelect }) {
 
   return (
     <div className="subject-creation-page">
+      <button className="back-btn-top" onClick={onBack}>← 返回</button>
       <div className="subject-creation-card" style={{ maxWidth: 680 }}>
         <h1 className="sc-title">📖 选择教材来源</h1>
         <p className="sc-subtitle">选择课程使用的教材，AI 将据此生成更精准的复习内容</p>
@@ -116,14 +117,7 @@ function TextbookSource({ onNext, onBack, selected, onSelect }) {
         )}
 
         {/* 底部按钮 */}
-        <div className="tb-footer">
-          <button className="sc-btn" style={{ background: 'transparent', color: 'var(--text)', border: '1px solid var(--border)' }} onClick={onBack}>
-            ← 上一步
-          </button>
-          <button className="sc-btn" onClick={handleConfirm} disabled={!canProceed && mode !== 'skip'}>
-            下一步 →
-          </button>
-        </div>
+
       </div>
     </div>
   )

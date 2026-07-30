@@ -1,0 +1,20 @@
+from sklearn.decomposition import PCA
+from sklearn.datasets import load_iris
+import matplotlib.pyplot as plt
+
+# 加载示例数据
+iris = load_iris()
+X = iris.data
+y = iris.target
+
+# 初始化PCA模型
+pca = PCA(n_components=2)
+
+# 训练模型并转换数据
+X_pca = pca.fit_transform(X)
+
+# 可视化结果
+plt.scatter(X_pca[:, 0], X_pca[:, 1], c=y, s=50, cmap='viridis')
+plt.xlabel('PC1')
+plt.ylabel('PC2')
+plt.show()

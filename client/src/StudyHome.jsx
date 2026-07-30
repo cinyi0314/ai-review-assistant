@@ -48,10 +48,13 @@ function StudyHome({ subjectName, onNavigate, onStartPractice, onStartReview, on
       {/* 快捷入口 */}
       <section className="card">
         <div className="quick-links">
-          <button className="btn-quick" onClick={() => onNavigate(1)}>📚 科目设置</button>
-          <button className="btn-quick" onClick={() => onNavigate(4)}>📝 题型设置</button>
-          <button className="btn-quick" onClick={() => onNavigate(5)}>📄 考试范围</button>
-          <button className="btn-quick" onClick={() => onNavigate(6)}>📚 题库</button>
+          <button className="btn-quick" onClick={() => onNavigate('subject')}>📚 科目设置</button>
+          <button className="btn-quick" onClick={() => onNavigate('textbook')}>📖 教材来源</button>
+          <button className="btn-quick" onClick={() => onNavigate('exam')}>📅 考试信息</button>
+          <button className="btn-quick" onClick={() => onNavigate('types')}>📝 题型设置</button>
+          <button className="btn-quick" onClick={() => onNavigate('scope')}>📄 考试范围</button>
+          <button className="btn-quick" onClick={() => onNavigate('bank')}>📚 题库</button>
+          <button className="btn-quick" onClick={() => onNavigate('supplementary')}>📎 补充材料</button>
           <button className="btn-quick" onClick={onOpenWrongBook}>📕 错题本</button>
         </div>
       </section>

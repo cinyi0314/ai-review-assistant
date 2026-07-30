@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function SubjectCreation({ onCreate }) {
+function SubjectCreation({ onCreate, onBack }) {
   const [name, setName] = useState('')
   const [error, setError] = useState('')
 
@@ -16,6 +16,7 @@ function SubjectCreation({ onCreate }) {
 
   return (
     <div className="subject-creation-page">
+      {onBack && <button className="back-btn-top" onClick={onBack}>← 返回</button>}
       <div className="subject-creation-card">
         <h1 className="sc-title">📚 创建复习科目</h1>
         <p className="sc-subtitle">输入课程名称，AI 将帮你一键生成专属复习计划</p>

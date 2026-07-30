@@ -1,0 +1,37 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# 读取Excel文件
+file_path = 'your_excel_file.xlsx'  # 替换为你的Excel文件路径
+df = pd.read_excel(file_path)
+
+# 将日期列转换为日期时间类型
+df['日期'] = pd.to_datetime(df['日期'])
+
+# 提取前10天的数据
+df_first_10_days = df.head(10)
+
+# 创建一个figure，并分成2x1的子图
+fig = plt.figure(figsize=(10, 8))
+
+# 第一个子图：猪肉价格走势
+plt.subplot(2, 1, 1)
+plt.plot(df_first_10_days['日期'], df_first_10_days['猪肉价格'], label='猪肉价格')
+plt.title('前10天猪肉价格走势')
+plt.xlabel('日期')
+plt.ylabel('价格')
+plt.legend()
+
+# 第二个子图：牛肉价格走势
+plt.subplot(2, 1, 2)
+plt.plot(df_first_10_days['日期'], df_first_10_days['牛肉价格'], label='牛肉价格', color='orange')
+plt.title('前10天牛肉价格走势')
+plt.xlabel('日期')
+plt.ylabel('价格')
+plt.legend()
+
+# 调整子图之间的间距
+plt.tight_layout()
+
+# 显示图表
+plt.show()

@@ -90,6 +90,7 @@ function ExamScope({ onNext, onBack, onSave }) {
 
   return (
     <div className="subject-creation-page">
+      <button className="back-btn-top" onClick={onBack}>← 返回</button>
       <div className="subject-creation-card" style={{ maxWidth: 720 }}>
         <h1 className="sc-title">📄 考试范围</h1>
         <p className="sc-subtitle">上传考试范围资料，AI 将自动提取其中的知识点</p>
@@ -162,26 +163,7 @@ function ExamScope({ onNext, onBack, onSave }) {
         )}
 
         {/* 底部 */}
-        <div className="tb-footer">
-          <button
-            className="sc-btn"
-            style={{ background: 'transparent', color: 'var(--text)', border: '1px solid var(--border)' }}
-            onClick={onBack}
-            disabled={uploading}
-          >
-            ← 上一步
-          </button>
-          <button
-            className="sc-btn"
-            style={{ background: 'transparent', color: 'var(--text)', border: '1px solid var(--border)' }}
-            onClick={handleSkip}
-          >
-            跳过
-          </button>
-          <button className="sc-btn" onClick={handleNext} disabled={uploading}>
-            下一步 →
-          </button>
-        </div>
+
       </div>
     </div>
   )

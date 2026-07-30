@@ -80,6 +80,7 @@ function QuestionBank({ onNext, onBack, onSave }) {
 
   return (
     <div className="subject-creation-page">
+      <button className="back-btn-top" onClick={onBack}>← 返回</button>
       <div className="subject-creation-card" style={{ maxWidth: 720 }}>
         <h1 className="sc-title">📚 题库设置</h1>
         <p className="sc-subtitle">
@@ -145,17 +146,7 @@ function QuestionBank({ onNext, onBack, onSave }) {
         )}
 
         {/* 底部 */}
-        <div className="tb-footer">
-          <button className="sc-btn" style={{ background: 'transparent', color: 'var(--text)', border: '1px solid var(--border)' }} onClick={onBack} disabled={uploading}>
-            ← 上一步
-          </button>
-          <button className="sc-btn" style={{ background: 'transparent', color: 'var(--text)', border: '1px solid var(--border)' }} onClick={handleSkip}>
-            跳过
-          </button>
-          <button className="sc-btn" onClick={handleNext} disabled={uploading}>
-            下一步 →
-          </button>
-        </div>
+
       </div>
     </div>
   )

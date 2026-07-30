@@ -749,134 +749,109 @@ function App() {
     }
   }
 
-  // Step 1: 创建科目
-  if (step === 1) {
+  // ========== 页面路由 ==========
+
+  // 配置子页面
+  if (mainMode === 'subject') {
     return (
       <SubjectCreation
         onCreate={async (name) => {
           await handleSelectSubject(name)
           setCurrentSubjectName(name)
-          setStep(step + 1)
+          setMainMode('home')
         }}
+        onBack={() => setMainMode('home')}
       />
     )
   }
 
-  // Step 2: 教材选择
-  if (step === 2) {
+  if (mainMode === 'textbook') {
     return (
       <TextbookSource
         selected={textbookSelection}
         onSelect={(sel) => setTextbookSelection(sel)}
-        onBack={() => setStep(step - 1)}
-        onNext={() => setStep(step + 1)}
+        onBack={() => setMainMode('home')}
+        onNext={() => setMainMode('home')}
       />
     )
   }
 
-  // Step 3: 考试信息
-  if (step === 3) {
+  if (mainMode === 'exam') {
     return (
       <ExamInfo
         onSave={(info) => setExamInfo(info)}
-        onBack={() => setStep(step - 1)}
-        onNext={() => setStep(step + 1)}
+        onBack={() => setMainMode('home')}
+        onNext={() => setMainMode('home')}
       />
     )
   }
 
-  // Step 4: 题型设置
-  if (step === 4) {
+  if (mainMode === 'types') {
     return (
       <QuestionTypeSettings
         onSave={(config) => setQuestionTypeConfig(config)}
-        onBack={() => setStep(step - 1)}
-        onNext={() => setStep(step + 1)}
+        onBack={() => setMainMode('home')}
+        onNext={() => setMainMode('home')}
       />
     )
   }
 
-  // Step 5: 考试范围
-  if (step === 5) {
+  if (mainMode === 'scope') {
     return (
       <ExamScope
         onSave={(data) => setExamScopeData(data)}
-        onBack={() => setStep(step - 1)}
-        onNext={() => setStep(step + 1)}
+        onBack={() => setMainMode('home')}
+        onNext={() => setMainMode('home')}
       />
     )
   }
 
-  // Step 6: 题库设置
-  if (step === 6) {
+  if (mainMode === 'bank') {
     return (
       <QuestionBank
         onSave={(data) => setQuestionBankData(data)}
-        onBack={() => setStep(step - 1)}
-        onNext={() => setStep(step + 1)}
+        onBack={() => setMainMode('home')}
+        onNext={() => setMainMode('home')}
       />
     )
   }
 
-  // Step 7: 补充材料
-  if (step === 7) {
+  if (mainMode === 'supplementary') {
     return (
       <SupplementaryMaterials
         onSave={(data) => setSupplementaryData(data)}
-        onBack={() => setStep(step - 1)}
-        onFinish={() => setStep(8)}
-      />
-    )
-  }
-
-  // Step 8: 主界面（子路由）
-  if (step === 8 && mainMode === 'practice') {
-    return (
-      <PracticeMode
-        questionTypes={questionTypeConfig}
-        questions={questions}
         onBack={() => setMainMode('home')}
+        onFinish={() => setMainMode('home')}
       />
     )
   }
 
-  if (step === 8 && mainMode === 'review') {
-    return (
-      <ReviewMode
-        subjectId={subjectId}
-        onBack={() => setMainMode('home')}
-      />
-    )
+  // 学习模式
+  if (mainMode === 'practice') {
+    return <PracticeMode questionTypes={questionTypeConfig} questions={questions} onBack={() => setMainMode('home')} />
   }
-
-  if (step === 8 && mainMode === 'wrongbook') {
+  if (mainMode === 'review') {
+    return <ReviewMode subjectId={subjectId} onBack={() => setMainMode('home')} />
+  }
+  if (mainMode === 'recite') {
+    return <ReciteMode subjectId={subjectId} onBack={() => setMainMode('home')} />
+  }
+  if (mainMode === 'wrongbook') {
     return <WrongBook subjectId={subjectId} onBack={() => setMainMode('home')} />
   }
 
-  if (step === 8 && mainMode === 'recite') {
-    return (
-      <ReciteMode
-        subjectId={subjectId}
-        onBack={() => setMainMode('home')}
-      />
-    )
-  }
-
-  if (step === 8) {
-    return (
-      <StudyHome
-        subjectName={currentSubjectName}
-        onNavigate={(s) => setStep(s)}
-        onStartPractice={() => setMainMode('practice')}
-        onStartReview={() => setMainMode('review')}
-        onStartRecite={() => setMainMode('recite')}
-        onOpenWrongBook={() => setMainMode('wrongbook')}
-        stats={{ questionsAnswered: 0, correctRate: 0, dueReviews: dueReviews.length }}
-      />
-    )
-  }
-
-  return null
+  // 默认：学习主界面
+  return (
+    <StudyHome
+      subjectName={currentSubjectName}
+      onNavigate={(page) => setMainMode(page)}
+      onStartPractice={() => setMainMode('practice')}
+      onStartReview={() => setMainMode('review')}
+      onStartRecite={() => setMainMode('recite')}
+      onOpenWrongBook={() => setMainMode('wrongbook')}
+      stats={{ questionsAnswered: 0, correctRate: 0, dueReviews: dueReviews.length }}
+    />
+  )
 }
 
 export default App

@@ -64,6 +64,7 @@ function SupplementaryMaterials({ onBack, onFinish, onSave }) {
 
   return (
     <div className="subject-creation-page">
+      <button className="back-btn-top" onClick={onBack}>← 返回</button>
       <div className="subject-creation-card" style={{ maxWidth: 680 }}>
         <h1 className="sc-title">📎 补充材料（选填）</h1>
         <p className="sc-subtitle">上传课堂PPT、笔记等补充材料，帮助AI更全面了解课程内容</p>
@@ -110,14 +111,7 @@ function SupplementaryMaterials({ onBack, onFinish, onSave }) {
           已上传 <strong>{files.filter(f => f.status === 'done').length}</strong> 个文件
         </p>
 
-        <div className="tb-footer">
-          <button className="sc-btn" style={{ background: 'transparent', color: 'var(--text)', border: '1px solid var(--border)' }} onClick={onBack} disabled={uploading}>
-            ← 上一步
-          </button>
-          <button className="sc-btn" onClick={handleFinish} disabled={uploading}>
-            完成 🎉
-          </button>
-        </div>
+
       </div>
     </div>
   )

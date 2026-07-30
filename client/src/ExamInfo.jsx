@@ -23,6 +23,7 @@ function ExamInfo({ onNext, onBack, onSave }) {
 
   return (
     <div className="subject-creation-page">
+      <button className="back-btn-top" onClick={onBack}>← 返回</button>
       <div className="subject-creation-card" style={{ maxWidth: 480 }}>
         <h1 className="sc-title">📅 考试信息</h1>
         <p className="sc-subtitle">设置考试日期和目标成绩，AI 将据此调整复习节奏</p>
@@ -57,17 +58,7 @@ function ExamInfo({ onNext, onBack, onSave }) {
         </div>
 
         {/* 底部 */}
-        <div className="tb-footer">
-          <button className="sc-btn" style={{ background: 'transparent', color: 'var(--text)', border: '1px solid var(--border)' }} onClick={onBack}>
-            ← 上一步
-          </button>
-          <button className="sc-btn" style={{ background: 'transparent', color: 'var(--text)', border: '1px solid var(--border)' }} onClick={handleSkip}>
-            跳过
-          </button>
-          <button className="sc-btn" onClick={handleNext}>
-            下一步 →
-          </button>
-        </div>
+
       </div>
     </div>
   )

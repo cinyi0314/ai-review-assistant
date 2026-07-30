@@ -1,0 +1,46 @@
+from pytdx.hq import TdxHq_API
+from pytdx.params import TDXParams
+import time
+import pandas as pd
+ip='120.232.150.195'
+port=7709
+api = TdxHq_API()
+
+def get(security='600010', daterange=1,Ktype=4):
+    '''
+    K线种类
+    0 5分钟K线 1 15分钟K线 2 30分钟K线 3 1小时K线 4 日K线
+    5 周K线
+    6 月K线
+    7 1分钟
+    8 1分钟K线 
+    9 日K线
+    10 季K线
+    11 年K线
+    '''
+    print(security,'下载日线数据')
+    fields = ['date','datetime','open', 'close', 'high', 'low', 'vol']
+    MARKET = TDXParams.MARKET_SZ
+    if security[0] == '6':
+        MARKET = TDXParams.MARKET_SH
+    df = []
+    while True:
+        try:
+            with api.connect(ip, port):
+                for i in range(daterange + 1):
+                    df += api.get_security_bars(Ktype, MARKET, security, (daterange - i) * 800, 800)
+                break
+        except Exception as e:
+            print('time out to connect to pytdx',e)
+            time.sleep(5)
+            continue
+    if df != []:
+        df = api.to_df(df)
+        df['date'] =df.datetime.str[0:10]
+        df['date'] = pd.to_datetime(df['date'], format='%Y-%m-%d')
+        #df = df.set_index('date', drop=False)
+        df = df[fields]
+        #df.to_csv(security + '.csv', columns=df.columns, index=True)
+    else:
+        print(security,'没有日线数据！')
+    return df
