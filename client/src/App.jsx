@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import './App.css'
 import SubjectCreation from './SubjectCreation'
 import TextbookSource from './TextbookSource'
+import ExamInfo from './ExamInfo'
 
 const API_BASE = (import.meta.env.VITE_API_BASE || 'http://localhost:3000') + '/api'
 
@@ -17,9 +18,10 @@ async function safeJson(res) {
 }
 
 function App() {
-  const [step, setStep] = useState(1) // 1=创建科目, 2=教材选择, 3=主界面
+  const [step, setStep] = useState(1) // 1=创建, 2=教材, 3=考试信息, 4=主界面
 
   const [textbookSelection, setTextbookSelection] = useState(null)
+  const [examInfo, setExamInfo] = useState(null)
 
   const [file, setFile] = useState(null)
   const [uploading, setUploading] = useState(false)
@@ -757,7 +759,18 @@ function App() {
     )
   }
 
-  // Step 3: 主界面
+  // Step 3: 考试信息
+  if (step === 3) {
+    return (
+      <ExamInfo
+        onSave={(info) => setExamInfo(info)}
+        onBack={() => setStep(step - 1)}
+        onNext={() => setStep(step + 1)}
+      />
+    )
+  }
+
+  // Step 4: 主界面
   return (
     <div className="app">
       <header className="header">

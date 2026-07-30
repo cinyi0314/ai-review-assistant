@@ -66,6 +66,24 @@
   margin-top: 32px;
 }
 
+/* ---------- Exam Info Page ---------- */
+.ei-field {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.ei-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-h);
+  margin-bottom: 6px;
+}
+
+.ei-input-error {
+  border-color: #e74c3c !important;
+}
+
 /* ---------- Subject Creation Page ---------- */
 .subject-creation-page {
   min-height: 100vh;
