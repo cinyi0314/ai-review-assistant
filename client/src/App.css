@@ -66,6 +66,80 @@
   margin-top: 32px;
 }
 
+/* ---------- Question Type Settings ---------- */
+.qts-header {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 0 8px 8px;
+  border-bottom: 2px solid var(--border);
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+  text-transform: uppercase;
+}
+
+.qts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 14px;
+}
+
+.qts-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 8px;
+  border-radius: 8px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+}
+
+.qts-row.qts-disabled {
+  opacity: 0.4;
+}
+
+.qts-col-check { width: 40px; text-align: center; flex-shrink: 0; }
+.qts-col-check input { width: 16px; height: 16px; accent-color: var(--accent); cursor: pointer; }
+
+.qts-col-name { width: 70px; font-size: 14px; font-weight: 500; color: var(--text-h); flex-shrink: 0; text-align: center; }
+
+.qts-col-desc { flex: 1; }
+
+.qts-col-num { width: 44px; flex-shrink: 0; }
+
+.qts-desc-input {
+  flex: 1;
+  min-width: 0;
+  font-size: 13px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-h);
+}
+
+.qts-num-input {
+  width: 44px;
+  flex-shrink: 0;
+  font-size: 13px;
+  padding: 6px 4px;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-h);
+}
+
+.qts-add-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 8px;
+}
+
 /* ---------- Exam Info Page ---------- */
 .ei-field {
   margin-bottom: 20px;
