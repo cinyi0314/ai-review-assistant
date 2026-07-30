@@ -66,6 +66,20 @@
   margin-top: 32px;
 }
 
+/* ---------- Question Bank ---------- */
+.qb-done { background: rgba(39, 174, 96, 0.04); }
+
+.qb-type-select {
+  flex-shrink: 0;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--accent-border);
+  background: var(--bg);
+  color: var(--accent);
+  cursor: pointer;
+}
+
 /* ---------- Exam Scope ---------- */
 .es-upload-zone {
   display: flex;

@@ -5,6 +5,7 @@ import TextbookSource from './TextbookSource'
 import ExamInfo from './ExamInfo'
 import QuestionTypeSettings from './QuestionTypeSettings'
 import ExamScope from './ExamScope'
+import QuestionBank from './QuestionBank'
 
 const API_BASE = (import.meta.env.VITE_API_BASE || 'http://localhost:3000') + '/api'
 
@@ -20,12 +21,13 @@ async function safeJson(res) {
 }
 
 function App() {
-  const [step, setStep] = useState(1) // 1=创建, 2=教材, 3=考试, 4=题型, 5=范围, 6=主界面
+  const [step, setStep] = useState(1) // 1=创建, 2=教材, 3=考试, 4=题型, 5=范围, 6=题库, 7=主界面
 
   const [textbookSelection, setTextbookSelection] = useState(null)
   const [examInfo, setExamInfo] = useState(null)
   const [questionTypeConfig, setQuestionTypeConfig] = useState(null)
   const [examScopeData, setExamScopeData] = useState(null)
+  const [questionBankData, setQuestionBankData] = useState(null)
 
   const [file, setFile] = useState(null)
   const [uploading, setUploading] = useState(false)
@@ -796,7 +798,18 @@ function App() {
     )
   }
 
-  // Step 6: 主界面
+  // Step 6: 题库设置
+  if (step === 6) {
+    return (
+      <QuestionBank
+        onSave={(data) => setQuestionBankData(data)}
+        onBack={() => setStep(step - 1)}
+        onNext={() => setStep(step + 1)}
+      />
+    )
+  }
+
+  // Step 7: 主界面
   return (
     <div className="app">
       <header className="header">
