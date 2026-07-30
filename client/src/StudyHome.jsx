@@ -1,4 +1,4 @@
-function StudyHome({ subjectName, onNavigate, onStartPractice, onStartReview, onStartRecite, stats }) {
+function StudyHome({ subjectName, onNavigate, onStartPractice, onStartReview, onStartRecite, onOpenWrongBook, stats }) {
   return (
     <div className="app">
       <header className="header">
@@ -52,6 +52,7 @@ function StudyHome({ subjectName, onNavigate, onStartPractice, onStartReview, on
           <button className="btn-quick" onClick={() => onNavigate(4)}>📝 题型设置</button>
           <button className="btn-quick" onClick={() => onNavigate(5)}>📄 考试范围</button>
           <button className="btn-quick" onClick={() => onNavigate(6)}>📚 题库</button>
+          <button className="btn-quick" onClick={onOpenWrongBook}>📕 错题本</button>
         </div>
       </section>
     </div>

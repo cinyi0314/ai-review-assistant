@@ -11,6 +11,7 @@ import StudyHome from './StudyHome'
 import PracticeMode from './PracticeMode'
 import ReviewMode from './ReviewMode'
 import ReciteMode from './ReciteMode'
+import WrongBook from './WrongBook'
 
 const API_BASE = (import.meta.env.VITE_API_BASE || 'http://localhost:3000') + '/api'
 
@@ -827,7 +828,7 @@ function App() {
   }
 
   // Step 8: 主界面（子路由）
-  const [mainMode, setMainMode] = useState('home') // home | practice | review | recite
+  const [mainMode, setMainMode] = useState('home') // home | practice | review | recite | wrongbook
 
   if (step === 8 && mainMode === 'practice') {
     return (
@@ -848,6 +849,10 @@ function App() {
     )
   }
 
+  if (step === 8 && mainMode === 'wrongbook') {
+    return <WrongBook subjectId={subjectId} onBack={() => setMainMode('home')} />
+  }
+
   if (step === 8 && mainMode === 'recite') {
     return (
       <ReciteMode
@@ -865,6 +870,7 @@ function App() {
         onStartPractice={() => setMainMode('practice')}
         onStartReview={() => setMainMode('review')}
         onStartRecite={() => setMainMode('recite')}
+        onOpenWrongBook={() => setMainMode('wrongbook')}
         stats={{ questionsAnswered: 0, correctRate: 0, dueReviews: dueReviews.length }}
       />
     )
