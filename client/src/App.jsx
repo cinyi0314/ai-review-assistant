@@ -115,6 +115,8 @@ function App() {
   const [questionCount, setQuestionCount] = useState(3)
 
   // 出题范围
+  const [mainMode, setMainMode] = useState('home') // home | practice | review | recite | wrongbook
+
   const [scope, setScope] = useState(localStorage.getItem('lastScope') || 'all')
   const [selectedFileIds, setSelectedFileIds] = useState([])
   const [subjectPoints, setSubjectPoints] = useState([])        // 知识点汇总
@@ -828,8 +830,6 @@ function App() {
   }
 
   // Step 8: 主界面（子路由）
-  const [mainMode, setMainMode] = useState('home') // home | practice | review | recite | wrongbook
-
   if (step === 8 && mainMode === 'practice') {
     return (
       <PracticeMode
