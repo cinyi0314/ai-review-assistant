@@ -66,6 +66,42 @@
   margin-top: 32px;
 }
 
+/* ---------- Exam Scope ---------- */
+.es-upload-zone {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.es-file-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.es-file-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  font-size: 14px;
+}
+
+.es-file-icon { flex-shrink: 0; font-size: 16px; }
+
+.es-file-name { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--text-h); }
+
+.es-file-status { flex-shrink: 0; font-size: 12px; color: var(--text); }
+
+.es-editor { margin-bottom: 16px; }
+
+.es-kp-count { font-size: 14px; color: var(--text); margin: 0 0 8px; }
+
 /* ---------- Question Type Settings ---------- */
 .qts-header {
   display: flex;
