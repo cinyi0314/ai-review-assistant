@@ -3,7 +3,7 @@ const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
 
-const { handleUpload } = require('../controllers/uploadController');
+const { handleUpload, handleBatchUpload } = require('../controllers/uploadController');
 
 const router = express.Router();
 
@@ -48,7 +48,24 @@ function uploadSingle(req, res, next) {
   });
 }
 
+// batch middleware
+function uploadBatch(req, res, next) {
+  upload.array('files', 20)(req, res, (err) => {
+    if (err instanceof multer.MulterError) {
+      if (err.code === 'LIMIT_FILE_SIZE') {
+        return res.status(413).json({ error: '文件过大，最大支持 10MB' });
+      }
+      return res.status(400).json({ error: err.message });
+    }
+    if (err) {
+      return res.status(500).json({ error: err.message });
+    }
+    next();
+  });
+}
+
 // --------------- routes ---------------
 router.post('/', uploadSingle, handleUpload);
+router.post('/batch', uploadBatch, handleBatchUpload);
 
 module.exports = router;

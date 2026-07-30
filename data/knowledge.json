@@ -1,0 +1,217 @@
+[
+  {
+    "id": "mqnpps3w-br0p716",
+    "fileId": "mqnppid5-m7zmunl",
+    "content": "极限的四则运算法则与两个重要极限的应用",
+    "mastered": false,
+    "createdAt": "2026-06-21T11:37:46.124Z"
+  },
+  {
+    "id": "mqnpps3x-lvwydgp",
+    "fileId": "mqnppid5-m7zmunl",
+    "content": "复合函数与隐函数的求导法则",
+    "mastered": false,
+    "createdAt": "2026-06-21T11:37:46.125Z"
+  },
+  {
+    "id": "mqnpps3x-a5crck9",
+    "fileId": "mqnppid5-m7zmunl",
+    "content": "洛必达法则与未定式极限的求解",
+    "mastered": false,
+    "createdAt": "2026-06-21T11:37:46.125Z"
+  },
+  {
+    "id": "mqnpps3x-1x7tjt9",
+    "fileId": "mqnppid5-m7zmunl",
+    "content": "不定积分的换元积分法与分部积分法",
+    "mastered": false,
+    "createdAt": "2026-06-21T11:37:46.125Z"
+  },
+  {
+    "id": "mqnpps3x-8hii9uw",
+    "fileId": "mqnppid5-m7zmunl",
+    "content": "函数的极值、最值及其经济应用（边际与弹性）",
+    "mastered": false,
+    "createdAt": "2026-06-21T11:37:46.125Z"
+  },
+  {
+    "id": "mqnpt89t-dwaoqqv",
+    "fileId": "mqnpsu1q-u0o9oru",
+    "content": "函数、极限与连续的基本概念与计算",
+    "mastered": true,
+    "createdAt": "2026-06-21T11:40:27.041Z"
+  },
+  {
+    "id": "mqnpt89t-rxx6di2",
+    "fileId": "mqnpsu1q-u0o9oru",
+    "content": "导数与微分的定义、几何意义及求导法则",
+    "mastered": true,
+    "createdAt": "2026-06-21T11:40:27.041Z"
+  },
+  {
+    "id": "mqnpt89t-hmwxfxc",
+    "fileId": "mqnpsu1q-u0o9oru",
+    "content": "微分中值定理及其在函数性质分析中的应用",
+    "mastered": true,
+    "createdAt": "2026-06-21T11:40:27.041Z"
+  },
+  {
+    "id": "mqnpt89t-o5896u8",
+    "fileId": "mqnpsu1q-u0o9oru",
+    "content": "不定积分的概念、基本公式与积分方法",
+    "mastered": true,
+    "createdAt": "2026-06-21T11:40:27.041Z"
+  },
+  {
+    "id": "mqnpt89t-chbs3sl",
+    "fileId": "mqnpsu1q-u0o9oru",
+    "content": "导数的经济应用（边际、弹性）及最值问题",
+    "mastered": true,
+    "createdAt": "2026-06-21T11:40:27.041Z"
+  },
+  {
+    "id": "mqnqf537-zv5wb92",
+    "fileId": "mqnqei5t-pwr45pg",
+    "content": "函数与极限的基本概念及运算",
+    "mastered": false,
+    "createdAt": "2026-06-21T11:57:29.347Z"
+  },
+  {
+    "id": "mqnqf537-zzqvmyk",
+    "fileId": "mqnqei5t-pwr45pg",
+    "content": "导数与微分的概念及求导法则",
+    "mastered": false,
+    "createdAt": "2026-06-21T11:57:29.347Z"
+  },
+  {
+    "id": "mqnqf537-4utrkqt",
+    "fileId": "mqnqei5t-pwr45pg",
+    "content": "微分中值定理与洛必达法则的应用",
+    "mastered": false,
+    "createdAt": "2026-06-21T11:57:29.347Z"
+  },
+  {
+    "id": "mqnqf537-rmcvat0",
+    "fileId": "mqnqei5t-pwr45pg",
+    "content": "不定积分的概念与积分方法",
+    "mastered": false,
+    "createdAt": "2026-06-21T11:57:29.347Z"
+  },
+  {
+    "id": "mqnqf537-1lduo00",
+    "fileId": "mqnqei5t-pwr45pg",
+    "content": "函数的极值、最值及经济应用",
+    "mastered": false,
+    "createdAt": "2026-06-21T11:57:29.347Z"
+  },
+  {
+    "id": "mqnqv3jp-tc0l2kp",
+    "fileId": "mqnqt1du-m741ycz",
+    "content": "极限的四则运算法则及运用",
+    "mastered": false,
+    "createdAt": "2026-06-21T12:09:53.845Z"
+  },
+  {
+    "id": "mqnqv3jq-kwznz5g",
+    "fileId": "mqnqt1du-m741ycz",
+    "content": "复合函数的求导法则",
+    "mastered": false,
+    "createdAt": "2026-06-21T12:09:53.846Z"
+  },
+  {
+    "id": "mqnqv3jq-0nmj6nw",
+    "fileId": "mqnqt1du-m741ycz",
+    "content": "洛必达法则求未定式极限",
+    "mastered": false,
+    "createdAt": "2026-06-21T12:09:53.846Z"
+  },
+  {
+    "id": "mqnqv3jq-ylf9y9n",
+    "fileId": "mqnqt1du-m741ycz",
+    "content": "不定积分的换元积分法和分部积分法",
+    "mastered": false,
+    "createdAt": "2026-06-21T12:09:53.846Z"
+  },
+  {
+    "id": "mqnqv3jq-818dqlj",
+    "fileId": "mqnqt1du-m741ycz",
+    "content": "闭区间上连续函数的介值定理",
+    "mastered": false,
+    "createdAt": "2026-06-21T12:09:53.846Z"
+  },
+  {
+    "id": "mqnqvvew-aoyjxxn",
+    "fileId": "mqnqvpcm-mfvt90r",
+    "content": "基本初等函数的导数公式",
+    "mastered": false,
+    "createdAt": "2026-06-21T12:10:29.960Z"
+  },
+  {
+    "id": "mqnqvvew-izj7vgf",
+    "fileId": "mqnqvpcm-mfvt90r",
+    "content": "导数的四则运算法则",
+    "mastered": false,
+    "createdAt": "2026-06-21T12:10:29.960Z"
+  },
+  {
+    "id": "mqnqvvew-g4zle56",
+    "fileId": "mqnqvpcm-mfvt90r",
+    "content": "复合函数的求导法则（链式法则）",
+    "mastered": false,
+    "createdAt": "2026-06-21T12:10:29.960Z"
+  },
+  {
+    "id": "mqnqvvew-qqqzqkh",
+    "fileId": "mqnqvpcm-mfvt90r",
+    "content": "反函数的求导法则",
+    "mastered": false,
+    "createdAt": "2026-06-21T12:10:29.960Z"
+  },
+  {
+    "id": "mqnqvvew-lo5ugbn",
+    "fileId": "mqnqvpcm-mfvt90r",
+    "content": "隐函数的求导方法",
+    "mastered": false,
+    "createdAt": "2026-06-21T12:10:29.960Z"
+  },
+  {
+    "id": "mqnti3ni-aca04pb",
+    "fileId": "knowledge-based",
+    "subjectId": "mqnqe87n-n1k",
+    "content": "函数定义、几何性质、基本初等函数和复合函数是第一章的重点。",
+    "mastered": false,
+    "createdAt": "2026-06-21T13:23:46.302Z"
+  },
+  {
+    "id": "mqnti3ni-xytjodl",
+    "fileId": "knowledge-based",
+    "subjectId": "mqnqe87n-n1k",
+    "content": "极限运算、两个重要极限、无穷小比较和函数连续性属于第二章核心内容。",
+    "mastered": false,
+    "createdAt": "2026-06-21T13:23:46.302Z"
+  },
+  {
+    "id": "mqnti3ni-nyt1sxq",
+    "fileId": "knowledge-based",
+    "subjectId": "mqnqe87n-n1k",
+    "content": "导数概念、几何意义、基本初等函数导数公式和复合函数求导是第三章重点。",
+    "mastered": false,
+    "createdAt": "2026-06-21T13:23:46.302Z"
+  },
+  {
+    "id": "mqnti3ni-3p6dx4y",
+    "fileId": "knowledge-based",
+    "subjectId": "mqnqe87n-n1k",
+    "content": "微分中值定理、洛必达法则、函数单调性判别和极值应用是第四章核心。",
+    "mastered": false,
+    "createdAt": "2026-06-21T13:23:46.302Z"
+  },
+  {
+    "id": "mqnti3ni-pns149h",
+    "fileId": "knowledge-based",
+    "subjectId": "mqnqe87n-n1k",
+    "content": "原函数与不定积分概念、基本积分公式、换元积分法和分部积分法是第五章重点。",
+    "mastered": false,
+    "createdAt": "2026-06-21T13:23:46.302Z"
+  }
+]

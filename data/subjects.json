@@ -1,0 +1,67 @@
+[
+  {
+    "id": "mqnqe87n-n1k",
+    "name": "高等数学",
+    "createdAt": "2026-06-21T11:56:46.739Z",
+    "files": [
+      {
+        "id": "mqntgu4l-2vwig53",
+        "name": "é«ç­æ°å­¦(I)æå­¦å¤§çº²(4å­¦å,è´¢ç»ç®¡çç±»ä¸ä¸åæçç¨ ).pdf",
+        "type": "exam",
+        "path": "D:\\ai-review-assistant\\uploads\\1782048167290-448681871.pdf",
+        "size": 179516,
+        "uploadedAt": "2026-06-21T13:22:47.301Z",
+        "fileType": "exam_range",
+        "hasAnswers": false,
+        "chapter": ""
+      },
+      {
+        "id": "mqnthtwm-kjd2wmx",
+        "name": "2023-2024-1é«ç­æ°å­¦1ï¼4å­¦åï¼è¯å·A.pdf",
+        "type": "exam",
+        "path": "D:\\ai-review-assistant\\uploads\\1782048210562-303946194.pdf",
+        "size": 258756,
+        "uploadedAt": "2026-06-21T13:23:33.670Z",
+        "fileType": "exam_range",
+        "hasAnswers": false,
+        "chapter": ""
+      },
+      {
+        "id": "mqnthtx5-o0x777x",
+        "name": "2024-2025-1é«ç­æ°å­¦1ï¼4å­¦åï¼è¯å·A.pdf",
+        "type": "exam",
+        "path": "D:\\ai-review-assistant\\uploads\\1782048210574-969528675.pdf",
+        "size": 246054,
+        "uploadedAt": "2026-06-21T13:23:33.689Z",
+        "fileType": "exam_range",
+        "hasAnswers": false,
+        "chapter": ""
+      },
+      {
+        "id": "mqnthtxr-t0w9chr",
+        "name": "2025-2026-1é«ç­æ°å­¦1ï¼4å­¦åï¼è¯å·A.pdf",
+        "type": "exam",
+        "path": "D:\\ai-review-assistant\\uploads\\1782048210584-626074205.pdf",
+        "size": 257620,
+        "uploadedAt": "2026-06-21T13:23:33.711Z",
+        "fileType": "exam_range",
+        "hasAnswers": false,
+        "chapter": ""
+      }
+    ],
+    "examStyle": {
+      "questionTypes": "填空题、选择题、判断题、计算题、综合题、证明题",
+      "knowledgeAreas": "函数极限与连续、导数与微分、微分中值定理、不定积分、定积分、经济应用",
+      "difficulty": "中等偏难，注重基础概念与计算能力，部分题目涉及综合应用与证明",
+      "optionPattern": "选择题选项多为4个（A、B、C、D），部分题目选项为数值或表达式，注重区分度",
+      "detectedTypes": [
+        "填空题",
+        "选择题",
+        "判断题",
+        "计算题",
+        "综合题",
+        "证明题"
+      ]
+    }
+  }
+]
