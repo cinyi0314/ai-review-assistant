@@ -5,6 +5,11 @@ function ExamInfo({ onNext, onBack, onSave }) {
   const [targetScore, setTargetScore] = useState('')
   const [errors, setErrors] = useState({})
 
+  const handleSkip = () => {
+    onSave(null)
+    onNext()
+  }
+
   const handleNext = () => {
     const errs = {}
     if (!examDate) errs.date = '请选择考试日期'
@@ -53,12 +58,11 @@ function ExamInfo({ onNext, onBack, onSave }) {
 
         {/* 底部 */}
         <div className="tb-footer">
-          <button
-            className="sc-btn"
-            style={{ background: 'transparent', color: 'var(--text)', border: '1px solid var(--border)' }}
-            onClick={onBack}
-          >
+          <button className="sc-btn" style={{ background: 'transparent', color: 'var(--text)', border: '1px solid var(--border)' }} onClick={onBack}>
             ← 上一步
+          </button>
+          <button className="sc-btn" style={{ background: 'transparent', color: 'var(--text)', border: '1px solid var(--border)' }} onClick={handleSkip}>
+            跳过
           </button>
           <button className="sc-btn" onClick={handleNext}>
             下一步 →
