@@ -35,7 +35,7 @@ function TextbookSource({ onNext, onBack, selected, onSelect }) {
         <h1 className="sc-title">📖 选择教材来源</h1>
         <p className="sc-subtitle">选择课程使用的教材，AI 将据此生成更精准的复习内容</p>
 
-        {/* 三个卡片 */}
+        {/* 两个卡片 */}
         <div className="textbook-cards">
           {/* 搜索 */}
           <div className={`tb-card ${mode === 'search' ? 'tb-card-active' : ''}`} onClick={() => setMode('search')}>
@@ -49,13 +49,6 @@ function TextbookSource({ onNext, onBack, selected, onSelect }) {
             <div className="tb-card-icon">📤</div>
             <div className="tb-card-title">上传电子书</div>
             <div className="tb-card-desc">支持 PDF / EPUB / TXT</div>
-          </div>
-
-          {/* 跳过 */}
-          <div className={`tb-card ${mode === 'skip' ? 'tb-card-active' : ''}`} onClick={() => { setMode('skip'); onNext() }}>
-            <div className="tb-card-icon">⏭️</div>
-            <div className="tb-card-title">跳过</div>
-            <div className="tb-card-desc">稍后再添加</div>
           </div>
         </div>
 

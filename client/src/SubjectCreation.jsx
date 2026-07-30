@@ -34,7 +34,7 @@ function SubjectCreation({ onCreate, onBack }) {
         {error && <p className="sc-error">{error}</p>}
 
         <button className="sc-btn" onClick={handleCreate}>
-          创建并继续 →
+          确认
         </button>
 
         <p className="sc-hint">

@@ -162,7 +162,9 @@ function ExamScope({ onNext, onBack, onSave }) {
           </p>
         )}
 
-        {/* 底部 */}
+        <div className="tb-footer">
+          <button className="sc-btn" onClick={handleNext}>确认</button>
+        </div>
 
       </div>
     </div>

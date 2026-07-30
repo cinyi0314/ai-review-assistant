@@ -111,6 +111,9 @@ function SupplementaryMaterials({ onBack, onFinish, onSave }) {
           已上传 <strong>{files.filter(f => f.status === 'done').length}</strong> 个文件
         </p>
 
+        <div className="tb-footer">
+          <button className="sc-btn" onClick={handleFinish}>确认</button>
+        </div>
 
       </div>
     </div>

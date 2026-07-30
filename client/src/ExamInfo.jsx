@@ -57,7 +57,9 @@ function ExamInfo({ onNext, onBack, onSave }) {
           {errors.score && <p className="sc-error">{errors.score}</p>}
         </div>
 
-        {/* 底部 */}
+        <div className="tb-footer">
+          <button className="sc-btn" onClick={handleNext}>确认</button>
+        </div>
 
       </div>
     </div>
